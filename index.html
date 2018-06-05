@@ -34,59 +34,6 @@
 <h1><center>What Grade Do I Need?</center></h1>
 </head>
 <body>
-<center>
-	<div id="container">
-	<form>
-		<div id="one">
-		Test:<br><input type="text" id="TestAvg" placeholder="Score">
-			   <input type="text" id="TestPer" placeholder="Weight"><br><br>
-			   
-		Homework:<br><input type="text" id="HWAvg" placeholder="Score">
-			   <input type="text" id="HWPer" placeholder="Weight"><br><br>
-
-		Quiz:<br><input type="text" id="QAvg" placeholder="Score">
-			   <input type="text" id="QPer" placeholder="Weight"><br><br>
-
-		Participation:<br><input type="text" id="ParAvg" placeholder="Score">
-			   <input type="text" id="ParPer" placeholder="Weight"><br><br></div>
-<div id="two">
-		Extra Credit:<br><input type="text" id="EXAvg" placeholder="Points"><br><br>
-
-		Final Exam:<br>
-			   <input type="text" id="Final" placeholder="Weight"><br><br></div>
-
-		Desired Score:<br><input type="text" id="Desired" placeholder="Weight"><br>
-	</form>
-	<input type="button" value="Calculate" onclick="calculate();">
-	<p id="out"></p>
-</center>
-<footer>
-	<p style="font-size:60%;">BG Source: https://hdwallsource.com/chalkboard-wallpaper-45741.html</p>
-</footer>
-<script>
-
-
-	function calculate() {
-		var TestAverage = parseFloat(document.getElementById("TestAvg").value);
-		var TestPercentage = parseFloat(document.getElementById("TestPer").value);
-		var HWAverage = parseFloat(document.getElementById("HWAvg").value);
-		var HWPercentage = parseFloat(document.getElementById("HWPer").value);
-		var QuizAverage = parseFloat(document.getElementById("QAvg").value);
-		var QuizPercentage = parseFloat(document.getElementById("QPer").value);
-		var PartAverage = parseFloat(document.getElementById("ParAvg").value);
-		var Partpercentage = parseFloat(document.getElementById("ParPer").value);
-		var ExtraCredit = parseFloat(document.getElementById("EXAvg").value);
-		var FinalExam = parseFloat(document.getElementById("Final").value);
-		var Desired = parseFloat(document.getElementById("Desired").value);
-
-		var GradeNeeded = (Desired - ExtraCredit - (TestAverage * (TestPercentage/100)) - (HWAverage * (HWPercentage/100)) - (QuizAverage * (QuizPercentage/100)) - (PartAverage * (Partpercentage/100))) / (FinalExam/100);
-
-if ((TestPercentage + HWPercentage + QuizPercentage + Partpercentage + FinalExam)>100)
-	 GradeNeeded=Error("Percentages exceed 100%. Please check inputs.")
-
-	document.getElementById("out").innerText = "Required Grade: " + GradeNeeded + "%"
-	}
-</script>
-
+hello
 </body>
 </html>
