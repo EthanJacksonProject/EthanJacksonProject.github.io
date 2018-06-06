@@ -9,8 +9,8 @@
 </head>
 <body>
 <form>
-  First name: <input type="text" name="firstname"><br>
-  Last name: <input type="text" name="lastname">
+  First name: <input id="first" type="text" name="firstname"><br>
+  Last name: <input id="last" type="text" name="lastname">
 </form>
 <p>Click the button to add a new row at the first position of the table and then add cells and content.</p>
 
@@ -35,11 +35,13 @@
 <script>
 function myFunction() {
     var table = document.getElementById("myTable");
+    var firstname = document.getElementById("first").text;
+    var lastname = document.getElementById("last").text;
     var row = table.insertRow(0);
     var cell1 = row.insertCell(0);
     var cell2 = row.insertCell(1);
-    cell1.innerHTML = "NEW CELL1";
-    cell2.innerHTML = "NEW CELL2";
+    cell1.innerHTML = firstname;
+    cell2.innerHTML = lastname;
 }
 </script>
 <a href="about">About Me</a>
